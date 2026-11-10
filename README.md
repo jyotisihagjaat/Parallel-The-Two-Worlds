@@ -1,4 +1,7 @@
 # 🎮 PARALLEL – The Two Worlds
+## 🚀 Play the Game
+
+🎮 **[PLAY PARALLEL – LIVE DEMO]( https://jyotisihagjaat.github.io/Parallel-The-Two-Worlds/)**
 
 **A browser-based puzzle platformer where two worlds exist side by side.**
 
