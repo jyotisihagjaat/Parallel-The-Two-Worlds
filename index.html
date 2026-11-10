@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080b18">
+    <title>PARALLEL — The Two Worlds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-icon">✦</span>
+                <span>PARALLEL</span>
+            </div>
+            <div class="world-label" id="world-label">LIGHT WORLD</div>
+            <button id="sound-btn" class="icon-btn" aria-label="Toggle sound">♫</button>
+        </header>
+
+        <main id="screen">
+
+            <section id="menu-screen" class="screen active">
+                <div class="menu-content">
+                    <div class="eyebrow">A JOURNEY BEYOND REALITY</div>
+                    <h1> TWO WORLDS.<br><span>ONE DESTINY.</span></h1>
+                    <p>Two realities. One mysterious connection.<br>Can you find your way home?</p>
+                    <button id="start-btn" class="primary-btn">START JOURNEY <span>→</span></button>
+                    <button id="levels-btn" class="secondary-btn">LEVEL SELECT</button>
+                    <div class="menu-footer">AN INTERACTIVE PUZZLE ADVENTURE</div>
+                </div>
+            </section>
+
+            <section id="level-screen" class="screen">
+                <h2>CHOOSE YOUR LEVEL</h2>
+                <p class="muted">Complete a level to unlock the next.</p>
+                <div id="level-grid" class="level-grid"></div>
+                <button class="secondary-btn back-btn">← BACK</button>
+            </section>
+
+            <section id="game-screen" class="screen">
+                <div class="game-hud">
+                    <div>LEVEL <strong id="level-number">01</strong></div>
+                    <div>CRYSTALS <strong id="crystal-count">0 / 1</strong></div>
+                    <div>SCORE <strong id="score">0</strong></div>
+                </div>
+
+                <div id="world-stage">
+                    <canvas id="game-canvas"></canvas>
+                    <div id="world-toast">LIGHT WORLD</div>
+                </div>
+
+                <div class="game-controls">
+                    <div class="movement-controls">
+                        <button class="control-btn" id="left-btn" aria-label="Move left">◀</button>
+                        <button class="control-btn" id="right-btn" aria-label="Move right">▶</button>
+                    </div>
+                    <div class="action-controls">
+                        <button class="control-btn switch-btn" id="switch-btn">⇄ SWITCH</button>
+                        <button class="control-btn jump-btn" id="jump-btn">JUMP ↑</button>
+                    </div>
+                </div>
+
+                <div class="game-bottom">
+                    <span>PC: ← → / A D &nbsp; | &nbsp; SPACE: JUMP &nbsp; | &nbsp; E: SWITCH</span>
+                    <button id="pause-btn" class="pause-btn">Ⅱ PAUSE</button>
+                </div>
+            </section>
+
+            <section id="pause-screen" class="screen">
+                <div class="dialog">
+                    <h2>PAUSED</h2>
+                    <p>Take a moment. Your journey can wait.</p>
+                    <button id="resume-btn" class="primary-btn">RESUME</button>
+                    <button id="restart-btn" class="secondary-btn">RESTART LEVEL</button>
+                    <button id="home-btn" class="secondary-btn">MAIN MENU</button>
+                </div>
+            </section>
+
+            <section id="complete-screen" class="screen">
+                <div class="dialog">
+                    <div class="complete-star">✦</div>
+                    <div class="eyebrow">REALITY RESTORED</div>
+                    <h2>LEVEL COMPLETE!</h2>
+                    <p id="complete-message">You found your way.</p>
+                    <div class="final-score">SCORE <strong id="final-score">0</strong></div>
+                    <button id="next-btn" class="primary-btn">NEXT LEVEL →</button>
+                    <button id="complete-home-btn" class="secondary-btn">MAIN MENU</button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
